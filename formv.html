@@ -1,0 +1,110 @@
+<!DOCTYPE html>  
+<head>   
+<script>
+function VALIDATEFORM() {
+var name = document.forms["RegForm"]["firstname"];
+var name1 = document.forms["RegForm"]["middlename"];
+var name2 = document.forms["RegForm"]["lastname"];
+var co = document.forms["RegForm"]["course"]; 
+var ph = document.forms["RegForm"]["phone"]; 
+var add = document.forms["RegForm"]["Add"];
+var email = document.forms["RegForm"]["Email"];
+var pa=document.forms["RegForm"]["Pass"];
+
+if (name.value == "") {
+window.alert("Please enter your name.");
+name.focus();
+return false;
+}
+if (name1.value == "") {
+window.alert("Please enter your name.");
+name1.focus();
+return false;
+}
+if (name2.value == "") {
+window.alert("Please enter your name.");
+name2.focus();
+return false;
+}
+if (co.selectedIndex < 1) {
+alert("Please enter your course.");
+co.focus();
+return false;
+}
+if (ph.value == "") {
+window.alert(
+"Please enter your mob number.");
+ph.focus();
+return false;
+}
+
+if (add.value == "") {
+window.alert(
+"Please enter your address.");
+add.focus();
+return false;
+}
+
+if (email.value == "") {
+window.alert(
+"Please enter a valid e-mail address.");
+email.focus();
+return false;
+}
+
+if (pa.value == "") {
+window.alert(
+"Please enter your password.");
+pa.focus();
+return false;
+}
+return true;
+}
+
+</script>
+</head>
+<body background="pic.jpg">  
+<br>  
+<br> 
+<h1>REGISTER</h1> 
+<form name="RegForm" action="/submit.php"
+onsubmit="return VALIDATEFORM()" method="post">  
+Firstname&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp&nbsp&nbsp        
+<input type="text" name="firstname" size="15"/> <br> <br>  
+ Middlename&nbsp &nbsp:&nbsp&nbsp &nbsp   
+<input type="text" name="middlename" size="15"/> <br> <br>   
+Lastname&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp&nbsp        
+<input type="text" name="lastname" size="15"/> <br> <br>     
+Course &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp&nbsp  
+  
+<select type="text" value="" name="course">  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+  
+<br>  
+<br>     
+
+Phone&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp&nbsp  
+   
+<input type="text" name="phone" size="10"/> <br> <br>  
+Address &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp  
+ <textarea cols="20" rows="5"  name="Add">  
+</textarea>  
+<br> <br>  
+Email&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp   
+<input type="email" id="email" name="Email"/> <br>    
+<br> <br>  
+Password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp     
+<input type="Password" id="pas" name="Pass"> <br>   
+<br> <br>  
+<input type="submit" value="Submit"/>  
+<input type="reset" value="Reset"/>  
+</form>  
+</body>  
+</html>  
